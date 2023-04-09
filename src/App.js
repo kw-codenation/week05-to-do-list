@@ -40,12 +40,6 @@ function App()
             update the status on a particular item
         */
 
-        /*let arr = [...list]
-        
-        (list[i].status === 'done') ? list[i].status = 'status' : list[i].status = 'done'
-
-        setList(list)
-        */
         const newList = list.map((item,index) => 
         {
           if (i === index) 
