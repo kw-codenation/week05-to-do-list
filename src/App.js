@@ -22,6 +22,7 @@ function App()
         */
 
         setList(state => [...state, {desc:desc, status:'active'}])
+        document.getElementById('desc').value = ''
     }
 
     function deleteItem(i)
@@ -39,11 +40,26 @@ function App()
             update the status on a particular item
         */
 
-        /*let arr = [...list]*/
+        /*let arr = [...list]
         
         (list[i].status === 'done') ? list[i].status = 'status' : list[i].status = 'done'
 
         setList(list)
+        */
+        const newList = list.map((item,index) => 
+        {
+          if (i === index) 
+          {
+
+            (item.status === 'done') ? item.status = 'active' : item.status = 'done'
+
+          }
+          
+          return item
+          
+        })
+
+        setList(newList)
         
     }
 
@@ -51,9 +67,10 @@ function App()
         <div className="to-do-list">
             <div className="to-do-list-title">To Do List</div>
             {
-                (list.length === 0) ? message : list.map((item, index) => <ToDoListItem key={index} desc={item.desc} status={item.status} updateStatus={updateStatus} deleteItem={deleteItem} index={index} />)
+                (list.length === 0) ? message : list.map((item, index) => <ToDoListItem key={index} desc={item.desc} status={item.status} statusClass={'to-do-list-status-' + item.status} updateStatus={updateStatus} deleteItem={deleteItem} index={index} />)
             }
             <p>To add an item to the list, enter a description and click 'add'</p>
+            <p>to change the status to 'done' just click on 'active'</p>
             <input type="text" className="to-do-list-input" id="desc"></input>
             <input type="button" className="to-do-list-add" value="add" onClick={() => addItem(document.getElementById('desc').value)} ></input>
         </div>

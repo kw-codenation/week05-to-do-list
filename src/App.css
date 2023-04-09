@@ -67,7 +67,7 @@
   text-align:left;
 }
 
-.to-do-list-status
+.to-do-list-status-active
 {
   background-color:darkblue;
   border:none;
@@ -76,7 +76,21 @@
   width:5vw;
   cursor:pointer;
 }
-.to-do-list-status:hover
+.to-do-list-status-active:hover
+{
+  color:pink;
+}
+
+.to-do-list-status-done
+{
+  background-color:blue;
+  border:none;
+  border-radius:0.5vw;
+  color:cyan;
+  width:5vw;
+  cursor:pointer;
+}
+.to-do-list-status-done:hover
 {
   color:pink;
 }
