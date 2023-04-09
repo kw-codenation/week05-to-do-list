@@ -2,37 +2,81 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.to-do-list
+{
+  background-image: url('./background.jpg');
+  background-size: cover;
+  height:98vh;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.to-do-list-add
+{
+  background-color:purple;
+  border:solid 2px pink;
+  border-radius:0.4vw;
+  color:pink;
+  margin-left:0.5vw;
+  cursor:pointer;
+}
+.to-do-list-add:hover
+{
+  background-color:pink;
+  border-color:purple;
+  color:purple; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.to-do-list-input
+{
+  border:solid 2px darkblue;
+  border-radius:0.5vw;
 }
 
-.App-link {
-  color: #61dafb;
+.to-do-list-title
+{
+  color:purple;
+  font-size:7vh;
+  text-shadow:2px 2px pink;
+  margin:2vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.to-do-list-delete
+{
+  background-color:purple;
+  border:solid 2px pink;
+  border-radius:0.4vw;
+  color:pink;
+  margin-right:0.5vw;
+  cursor:pointer;
+}
+.to-do-list-delete:hover
+{
+  background-color:pink;
+  border-color:purple;
+  color:purple;
+}
+
+.to-do-list-item
+{
+  display:inline-block;
+  background-color: transparent;
+  border:none;
+  color:darkmagenta;
+  width:20vw;
+  text-align:left;
+}
+
+.to-do-list-status
+{
+  background-color:darkblue;
+  border:none;
+  border-radius:0.5vw;
+  color:cyan;
+  width:5vw;
+  cursor:pointer;
+}
+.to-do-list-status:hover
+{
+  color:pink;
 }
